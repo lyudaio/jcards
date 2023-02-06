@@ -16,6 +16,12 @@ import java.util.List;
  * @since 0.0.1
  */
 public class Deck {
+
+    /**
+     * The `cards` member variable represents a collection of cards in a deck.
+     * It is used to store and manage all the cards in the deck.
+     * This variable is private and is only accessible within the class.
+     */
     private List<Card> cards;
 
     /**
@@ -108,4 +114,29 @@ public class Deck {
         }
         return indices;
     }
+
+    /**
+     * Gets the number of cards in the deck.
+     *
+     * @return the number of cards in the deck
+     */
+    public int getSize() {
+        return cards.size();
+    }
+
+    /**
+     * Gets the card at the specified index in the deck.
+     *
+     * @param index the index of the desired card
+     * @return the card at the specified index
+     * @throws IndexOutOfBoundsException if the index is out of range (index < 0 || index >= deck size)
+     */
+    public Card getCardAtIndex(int index) throws IndexOutOfBoundsException {
+        if (index < 0 || index >= getSize()) {
+            throw new IndexOutOfBoundsException("The specified index is out of range: " + index);
+        }
+        return cards.get(index);
+    }
+
+
 }
