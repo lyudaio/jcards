@@ -7,7 +7,7 @@
 
     <groupId>io.lyuda</groupId>
     <artifactId>jcards</artifactId>
-    <version>1.0</version>
+    <version>0.0.1</version>
     <packaging>jar</packaging>
 
     <url>https://github.com/lyuda/jcards</url>
