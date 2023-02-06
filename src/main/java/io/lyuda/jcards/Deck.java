@@ -63,6 +63,9 @@ public class Deck implements Comparable<Deck> {
      * @return the number of cards remaining in the deck
      */
     public int cardsRemaining() {
+        if (cards.isEmpty()) {
+            throw new IllegalStateException("No more cards in the deck");
+        }
         return cards.size();
     }
 
