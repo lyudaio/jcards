@@ -6,7 +6,7 @@ on:
       - main
 
 env:
-  JAVA_HOME: ${{ env.JAVA_HOME }}
+  JDK_VERSION: 19
 
 jobs:
   build:
@@ -19,7 +19,7 @@ jobs:
     - name: Set up JDK
       uses: actions/setup-java@v1
       with:
-        java-version: 19
+        java-version: ${{ env.JDK_VERSION }}
 
     - name: Build and Test
       run: |
