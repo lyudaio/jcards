@@ -1,4 +1,4 @@
-package io.lyuda;
+package io.lyuda.jcards;
 
 /**
  * The UnicodeConstants class serves as a container for Unicode representations of playing cards,

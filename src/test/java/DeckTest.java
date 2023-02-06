@@ -1,7 +1,7 @@
 
 
-import io.lyuda.Card;
-import io.lyuda.Deck;
+import io.lyuda.jcards.Card;
+import io.lyuda.jcards.Deck;
 import org.junit.jupiter.api.BeforeEach;
 
 import org.junit.jupiter.api.Test;

@@ -1,12 +1,12 @@
 
-import io.lyuda.Card;
+import io.lyuda.jcards.Card;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.util.Objects;
 
-import static io.lyuda.Card.Suit;
-import static io.lyuda.Card.Rank;
+import static io.lyuda.jcards.Card.Suit;
+import static io.lyuda.jcards.Card.Rank;
 import static org.junit.jupiter.api.Assertions.*;
 
 

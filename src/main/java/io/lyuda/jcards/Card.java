@@ -1,4 +1,4 @@
-package io.lyuda;
+package io.lyuda.jcards;
 
 import java.util.Objects;
 

@@ -5,6 +5,9 @@
 >
     <modelVersion>4.0.0</modelVersion>
 
+    <distributionManagement>
+
+    </distributionManagement>
     <groupId>io.lyuda</groupId>
     <artifactId>jcards</artifactId>
     <version>0.0.1</version>

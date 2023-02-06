@@ -1,4 +1,4 @@
-import io.lyuda.UnicodeConstants;
+import io.lyuda.jcards.UnicodeConstants;
 
 import org.junit.jupiter.api.Test;
 
