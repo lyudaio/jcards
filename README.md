@@ -30,6 +30,28 @@ public class Main {
 
 This will output `ACE of SPADES`.
 
+# Contributing
+
+We welcome and encourage contributions to jCards! Whether you're fixing a bug, adding a new feature, or simply improving the documentation, your help is greatly appreciated.
+
+## Submitting a Pull Request
+
+If you would like to contribute code to jCards, you can do so by submitting a pull request on GitHub.
+
+1. Fork the repository on GitHub.
+2. Clone your fork to your local machine.
+3. Create a new branch for your changes.
+4. Make the necessary changes in the code.
+5. Push the changes to your fork on GitHub.
+6. Submit a pull request, including a detailed description of your changes and why they are needed.
+
+## Raising an Issue
+
+If you find a bug in jCards, or if you have an idea for a new feature, you can raise an issue on GitHub. When raising an issue, please include a clear and concise description of the problem, and any relevant details such as error messages, screenshots, and/or code snippets.
+
+We look forward to your contributions!
+
+
 ## License
 
 jCards is licensed under the MIT license. This means that you are free to use, modify, and distribute the library for any purpose, as long as you include the license and copyright notice in your distribution.
