@@ -21,7 +21,7 @@ jobs:
         
     - name: Build and Test
       run: |
-        ./mvnw clean install
+        ./mvn clean install
 
     - name: Check Code Quality
       run: |
