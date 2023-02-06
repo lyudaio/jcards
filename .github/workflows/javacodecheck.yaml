@@ -13,7 +13,7 @@ jobs:
     - name: Checkout Code
       uses: actions/checkout@v2
 
-    - name: Set up JDK
+    - name: Setup Java JDK
       uses: actions/setup-java@v3.9.0
       with:
         java-version: 19
