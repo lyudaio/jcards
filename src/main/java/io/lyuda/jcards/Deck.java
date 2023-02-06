@@ -77,6 +77,10 @@ public class Deck implements Comparable<Deck> {
      * @return the index of the card in the deck, or -1 if the card is not found
      */
     public int findCard(Card.Rank rank, Card.Suit suit) {
+        if (cards.isEmpty()) {
+            throw new IllegalStateException("No more cards in the deck");
+        }
+
         for (int i = 0; i < cards.size(); i++) {
             Card card = cards.get(i);
             if (card.getRank() == rank && card.getSuit() == suit) {
