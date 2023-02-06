@@ -20,6 +20,11 @@ jobs:
       uses: actions/setup-java@v1
       with:
         java-version: ${{ env.JDK_VERSION }}
+        
+    - name: Set up Maven
+      run: |
+        ./sudo apt update
+        ./sudo apt install maven -y
 
     - name: Build and Test
       run: |
