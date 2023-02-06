@@ -129,7 +129,7 @@ public class Deck implements Comparable<Deck> {
      *
      * @param index the index of the desired card
      * @return the card at the specified index
-     * @throws IndexOutOfBoundsException if the index is out of range (index < 0 || index >= deck size)
+     * @throws IndexOutOfBoundsException if the index is out of range (index (less than) 0 || index >= deck size)
      */
     public Card getCardAtIndex(int index) throws IndexOutOfBoundsException {
         if (index < 0 || index >= getSize()) {
