@@ -3,6 +3,9 @@ package io.lyuda;
 /**
  * The UnicodeConstants class serves as a container for Unicode representations of playing cards,
  * suits, and ranks.
+ *
+ * @author NullRSJ
+ * @since 0.0.1
  */
 public class UnicodeConstants {
 
