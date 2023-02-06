@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://i.imgur.com/5xKGdIw.png">
+  <img src="https://i.imgur.com/5xKGdIw.png" alt="Library Logo" height="200" width="200">
 </p>
 
 # jCards - A Java Library for Playing Cards
