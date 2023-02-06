@@ -1,0 +1,33 @@
+name: Java Code Check
+
+on:
+  push:
+    branches:
+      - main
+
+env:
+  JDK_VERSION: openjdk-19.0.2
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v2
+
+    - name: Set up JDK
+      uses: actions/setup-java@v1
+      with:
+        java-version: ${{ env.JDK_VERSION }}
+
+    - name: Build and Test
+      run: |
+        ./mvnw clean install
+
+    - name: Check Code Quality
+      run: |
+        ./mvnw checkstyle:check
+        ./mvnw pmd:check
+        ./mvnw findbugs:check
+        ./mvnw javadoc:javadoc
