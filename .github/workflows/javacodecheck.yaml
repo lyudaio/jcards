@@ -18,6 +18,7 @@ jobs:
       with:
         java-version: '19'
         distribution: 'zulu'
+        cache: 'maven'
         
     - name: Build and Test
       run: |
