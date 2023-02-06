@@ -21,18 +21,13 @@ jobs:
       with:
         java-version: ${{ env.JDK_VERSION }}
         
-    - name: Set up Maven
-      run: |
-        ./apt update
-        ./apt install maven -y
-
     - name: Build and Test
       run: |
-        ./mvnw clean install
+        ./mvn clean install
 
     - name: Check Code Quality
       run: |
-        ./mvnw checkstyle:check
-        ./mvnw pmd:check
-        ./mvnw findbugs:check
-        ./mvnw javadoc:javadoc
+        ./mvn checkstyle:check
+        ./mvn pmd:check
+        ./mvn findbugs:check
+        ./mvn javadoc:javadoc
