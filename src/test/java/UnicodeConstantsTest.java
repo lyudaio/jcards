@@ -1,145 +1,84 @@
-import io.lyuda.jcards.UnicodeConstants;
 
+
+import io.lyuda.jcards.UnicodeConstants;
+import io.lyuda.jcards.Card.Rank;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 /**
- * Test class for {@link UnicodeConstants}
+ * This class provides test cases for the {@link UnicodeConstants} class.
+ *
+ * The tests ensure that the symbols for the {@link UnicodeConstants.Rank} and
+ * {@link UnicodeConstants.Suit} enums are correctly returned by their respective
+ * {@link UnicodeConstants.Rank#getSymbol()} and {@link UnicodeConstants.Suit#getSymbol()}
+ * methods.
  *
  * @author NullRSJ
  * @since 0.0.1
  */
-public class UnicodeConstantsTest {
+
+class UnicodeConstantsTest {
 
     /**
-     * Tests if the unicode representation of the hearts suit is correct
+     * Test the values of the {@link UnicodeConstants.Suit} enum.
+     *
+     * This test verifies the correctness of the symbols returned by the
+     * {@link UnicodeConstants.Suit#getSymbol()} method for each suit.
+     *
+     * The symbols tested are:
+     * <ul>
+     *   <li>{@code "\u2665"} for the {@link UnicodeConstants.Suit#HEART} suit</li>
+     *   <li>{@code "\u2666"} for the {@link UnicodeConstants.Suit#DIAMOND} suit</li>
+     *   <li>{@code "\u2660"} for the {@link UnicodeConstants.Suit#SPADE} suit</li>
+     *   <li>{@code "\u2663"} for the {@link UnicodeConstants.Suit#CLUB} suit</li>
+     * </ul>
      */
     @Test
-    public void testHeartSuit() {
-        assertEquals("\u2665", UnicodeConstants.HEART);
+    void testSuitEnumValues() {
+        assertEquals("\u2665", UnicodeConstants.Suit.HEART.getSymbol());
+        assertEquals("\u2666", UnicodeConstants.Suit.DIAMOND.getSymbol());
+        assertEquals("\u2660", UnicodeConstants.Suit.SPADE.getSymbol());
+        assertEquals("\u2663", UnicodeConstants.Suit.CLUB.getSymbol());
     }
 
     /**
-     * Tests if the unicode representation of the diamonds suit is correct
+     * Tests the {@link Rank} enumeration constants.
+     *
+     * <p>The test verifies that the {@link Rank#getSymbol()} method of each constant in the {@code Rank}
+     * enum returns the expected symbol in Unicode format.
+     *
+     * <p>The following symbols are tested:
+     * <ul>
+     *   <li>Expects {@code "\uD83C\uDCA1"} for {@link Rank#ACE}</li>
+     *   <li>Expects {@code "\uD83C\uDCA2"} for {@link Rank#TWO}</li>
+     *   <li>Expects {@code "\uD83C\uDCA3"} for {@link Rank#THREE}</li>
+     *   <li>Expects {@code "\uD83C\uDCA4"} for {@link Rank#FOUR}</li>
+     *   <li>Expects {@code "\uD83C\uDCA5"} for {@link Rank#FIVE}</li>
+     *   <li>Expects {@code "\uD83C\uDCA6"} for {@link Rank#SIX}</li>
+     *   <li>Expects {@code "\uD83C\uDCA7"} for {@link Rank#SEVEN}</li>
+     *   <li>Expects {@code "\uD83C\uDCA8"} for {@link Rank#EIGHT}</li>
+     *   <li>Expects {@code "\uD83C\uDCA9"} for {@link Rank#NINE}</li>
+     *   <li>Expects {@code "\uD83C\uDCAA"} for {@link Rank#TEN}</li>
+     *   <li>Expects {@code "\uD83C\uDCAB"} for {@link Rank#JACK}</li>
+     *   <li>Expects {@code "\uD83C\uDCAD"} for {@link Rank#QUEEN}</li>
+     *   <li>Expects {@code "\uD83C\uDCAE"} for {@link Rank#KING}</li>
+     * </ul>
      */
     @Test
-    public void testDiamondSuit() {
-        assertEquals("\u2666", UnicodeConstants.DIAMOND);
+    void testRankEnumValues() {
+        assertEquals("\uD83C\uDCA1", UnicodeConstants.Rank.ACE.getSymbol());
+        assertEquals("\uD83C\uDCA2", UnicodeConstants.Rank.TWO.getSymbol());
+        assertEquals("\uD83C\uDCA3", UnicodeConstants.Rank.THREE.getSymbol());
+        assertEquals("\uD83C\uDCA4", UnicodeConstants.Rank.FOUR.getSymbol());
+        assertEquals("\uD83C\uDCA5", UnicodeConstants.Rank.FIVE.getSymbol());
+        assertEquals("\uD83C\uDCA6", UnicodeConstants.Rank.SIX.getSymbol());
+        assertEquals("\uD83C\uDCA7", UnicodeConstants.Rank.SEVEN.getSymbol());
+        assertEquals("\uD83C\uDCA8", UnicodeConstants.Rank.EIGHT.getSymbol());
+        assertEquals("\uD83C\uDCA9", UnicodeConstants.Rank.NINE.getSymbol());
+        assertEquals("\uD83C\uDCAA", UnicodeConstants.Rank.TEN.getSymbol());
+        assertEquals("\uD83C\uDCAB", UnicodeConstants.Rank.JACK.getSymbol());
+        assertEquals("\uD83C\uDCAD", UnicodeConstants.Rank.QUEEN.getSymbol());
+        assertEquals("\uD83C\uDCAE", UnicodeConstants.Rank.KING.getSymbol());
     }
-
-    /**
-     * Tests if the unicode representation of the spades suit is correct
-     */
-    @Test
-    public void testSpadeSuit() {
-        assertEquals("\u2660", UnicodeConstants.SPADE);
-    }
-
-    /**
-     * Tests if the unicode representation of the clubs suit is correct
-     */
-    @Test
-    public void testClubSuit() {
-        assertEquals("\u2663", UnicodeConstants.CLUB);
-    }
-
-    /**
-     * Tests if the unicode representation of the ace rank is correct
-     */
-    @Test
-    public void testAceRank() {
-        assertEquals("\uD83C\uDCA1", UnicodeConstants.ACE);
-    }
-
-    /**
-     * Tests if the unicode representation of the two rank is correct
-     */
-    @Test
-    public void testTwoRank() {
-        assertEquals("\uD83C\uDCA2", UnicodeConstants.TWO);
-    }
-
-    /**
-     * Tests if the unicode representation of the three rank is correct
-     */
-    @Test
-    public void testThreeRank() {
-        assertEquals("\uD83C\uDCA3", UnicodeConstants.THREE);
-    }
-
-    /**
-     * Tests if the unicode representation of the four rank is correct
-     */
-    @Test
-    public void testFourRank() {
-        assertEquals("\uD83C\uDCA4", UnicodeConstants.FOUR);
-    }
-
-    /**
-     * Tests if the unicode representation of the five rank is correct
-     */
-    @Test
-    public void testFiveRank() {
-        assertEquals("\uD83C\uDCA5", UnicodeConstants.FIVE);
-    }
-
-    /**
-     * Tests if the unicode representation of the six rank is correct
-     */
-    @Test
-    public void testSixRank() {
-        assertEquals("\uD83C\uDCA6", UnicodeConstants.SIX);
-    }
-
-    /**
-     * Tests if the unicode representation of the seven rank is correct
-     */
-    @Test
-    public void testSevenRank() {
-        assertEquals("\uD83C\uDCA7", UnicodeConstants.SEVEN);
-    }
-
-    /**
-     * Tests if the unicode representation of the eight rank is correct
-     */
-    @Test
-    public void testEightRank() {
-        assertEquals("\uD83C\uDCA8", UnicodeConstants.EIGHT);
-    }
-
-    /**
-     * Tests if the unicode representation of the nine rank is correct
-     */
-    @Test
-    public void testNineRank() {
-        assertEquals("\uD83C\uDCA9", UnicodeConstants.NINE);
-    }
-
-
-    /**
-     * Tests if the unicode representation of the jack rank is correct
-     */
-    @Test
-    public void testJackRank() {
-        assertEquals("\uD83C\uDCAB", UnicodeConstants.JACK);
-    }
-
-    /**
-     * Tests if the unicode representation of the queen rank is correct
-     */
-    @Test
-    public void testQueenRank() {
-        assertEquals("\uD83C\uDCAD", UnicodeConstants.QUEEN);
-    }
-
-    /**
-     * Tests if the unicode representation of the king rank is correct
-     */
-    @Test
-    public void testKingRank() {
-        assertEquals("\uD83C\uDCAE", UnicodeConstants.KING);
-    }
-
 }
-

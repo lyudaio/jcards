@@ -1,48 +1,131 @@
 package io.lyuda.jcards;
 
 /**
- * The UnicodeConstants class serves as a container for Unicode representations of playing cards,
- * suits, and ranks.
+ * The `UnicodeConstants` class serves as a container for Unicode representations of playing card suits and ranks.
+ * The class uses enumeration for suits and ranks to improve code readability and reduce the risk of typos.
  *
  * @author NullRSJ
  * @since 0.0.1
  */
-public class UnicodeConstants {
+public final class UnicodeConstants {
 
-    /** Unicode representation of the heart suit */
-    public static final String HEART = "\u2665";
-    /** Unicode representation of the diamond suit */
-    public static final String DIAMOND = "\u2666";
-    /** Unicode representation of the spade suit */
-    public static final String SPADE = "\u2660";
-    /** Unicode representation of the club suit */
-    public static final String CLUB = "\u2663";
+    /**
+     * An enumeration of the suits of a playing card deck. Each enumeration value has a corresponding Unicode symbol.
+     */
+    public enum Suit {
+        /**
+         * Heart suit represented by the Unicode symbol '\u2665'
+         */
+        HEART("\u2665"),
+        /**
+         * Diamond suit represented by the Unicode symbol '\u2666'
+         */
+        DIAMOND("\u2666"),
+        /**
+         * Spade suit represented by the Unicode symbol '\u2660'
+         */
+        SPADE("\u2660"),
+        /**
+         * Club suit represented by the Unicode symbol '\u2663'
+         */
+        CLUB("\u2663");
 
-    /** Unicode representation of the Ace rank */
-    public static final String ACE = "\uD83C\uDCA1";
-    /** Unicode representation of the 2 rank */
-    public static final String TWO = "\uD83C\uDCA2";
-    /** Unicode representation of the 3 rank */
-    public static final String THREE = "\uD83C\uDCA3";
-    /** Unicode representation of the 4 rank */
-    public static final String FOUR = "\uD83C\uDCA4";
-    /** Unicode representation of the 5 rank */
-    public static final String FIVE = "\uD83C\uDCA5";
-    /** Unicode representation of the 6 rank */
-    public static final String SIX = "\uD83C\uDCA6";
-    /** Unicode representation of the 7 rank */
-    public static final String SEVEN = "\uD83C\uDCA7";
-    /** Unicode representation of the 8 rank */
-    public static final String EIGHT = "\uD83C\uDCA8";
-    /** Unicode representation of the 9 rank */
-    public static final String NINE = "\uD83C\uDCA9";
-    /** Unicode representation of the 10 rank */
-    public static final String TEN = "\uD83C\uDCAA";
-    /** Unicode representation of the Jack rank */
-    public static final String JACK = "\uD83C\uDCAB";
-    /** Unicode representation of the Queen rank */
-    public static final String QUEEN = "\uD83C\uDCAD";
-    /** Unicode representation of the King rank */
-    public static final String KING = "\uD83C\uDCAE";
+        private final String symbol;
+
+        /**
+         * Creates a new `Suit` enumeration value with the specified Unicode symbol.
+         *
+         * @param symbol the Unicode symbol for the suit
+         */
+        Suit(String symbol) {
+            this.symbol = symbol;
+        }
+
+        /**
+         * Returns the Unicode symbol for the suit.
+         *
+         * @return the Unicode symbol for the suit
+         */
+        public String getSymbol() {
+            return symbol;
+        }
+    }
+
+    /**
+     * An enumeration of the ranks of a playing card deck. Each enumeration value has a corresponding Unicode symbol.
+     */
+    public enum Rank {
+        /**
+         * Ace rank represented by the Unicode symbol '\uD83C\uDCA1'
+         */
+        ACE("\uD83C\uDCA1"),
+        /**
+         * Two rank represented by the Unicode symbol '\uD83C\uDCA2'
+         */
+        TWO("\uD83C\uDCA2"),
+        /**
+         * Three rank represented by the Unicode symbol '\uD83C\uDCA3'
+         */
+        THREE("\uD83C\uDCA3"),
+        /**
+         * Four rank represented by the Unicode symbol '\uD83C\uDCA4'
+         */
+        FOUR("\uD83C\uDCA4"),
+        /**
+         * Five rank represented by the Unicode symbol '\uD83C\uDCA5'
+         */
+        FIVE("\uD83C\uDCA5"),
+        /**
+         * Six rank represented by the Unicode symbol '\uD83C\uDCA6'
+         */
+        SIX("\uD83C\uDCA6"),
+        /**
+         * Seven rank represented by the Unicode symbol '\uD83C\uDCA7'
+         */
+        SEVEN("\uD83C\uDCA7"),
+        /**
+         * Eight rank represented by the Unicode symbol '\uD83C\uDCA8'
+         */
+        EIGHT("\uD83C\uDCA8"),
+        /**
+         * Nine rank represented by the Unicode symbol '\uD83C\uDCA9'
+         */
+        NINE("\uD83C\uDCA9"),
+
+        /**
+         * Ten rank represented by the Unicode symbol '\uD83C\uDCAA'
+         */
+        TEN("\uD83C\uDCAA"),
+        /**
+         * Jack rank represented by the Unicode symbol '\uD83C\uDCAB'
+         */
+        JACK("\uD83C\uDCAB"),
+        /**
+         * Queen rank represented by the Unicode symbol '\uD83C\uDCAD'
+         */
+        QUEEN("\uD83C\uDCAD"),
+        /**
+         * King rank represented by the Unicode symbol '\uD83C\uDCAE'
+         */
+        KING("\uD83C\uDCAE");
+        private final String symbol;
+
+        /**
+         * Creates a new `Rank` enumeration value with the specified Unicode symbol.
+         *
+         * @param symbol the Unicode symbol for the rank
+         */
+        Rank(String symbol) {
+            this.symbol = symbol;
+        }
+
+        /**
+         * Returns the Unicode symbol for the rank.
+         *
+         * @return the Unicode symbol for the rank
+         */
+        public String getSymbol() {
+            return symbol;
+        }
+    }
 }
-
