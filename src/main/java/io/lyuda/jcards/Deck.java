@@ -15,7 +15,7 @@ import java.util.List;
  * @author NullRSJ
  * @since 0.0.1
  */
-public class Deck {
+public class Deck implements Comparable<Deck> {
 
     /**
      * The `cards` member variable represents a collection of cards in a deck.
@@ -136,6 +136,19 @@ public class Deck {
             throw new IndexOutOfBoundsException("The specified index is out of range: " + index);
         }
         return cards.get(index);
+    }
+
+    /**
+     * Compares two deck of cards based on their size.
+     *
+     * @param o the deck to compare to
+     * @return a negative integer if this deck has less cards than `o`,
+     *         zero if this deck has the same number of cards as `o`,
+     *         or a positive integer if this deck has more cards than `o`.
+     */
+    @Override
+    public int compareTo(Deck o) {
+        return Integer.compare(this.cards.size(), o.cards.size());
     }
 
 

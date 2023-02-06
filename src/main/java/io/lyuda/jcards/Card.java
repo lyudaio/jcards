@@ -11,8 +11,7 @@ import java.util.Objects;
  * @author NullRSJ
  * @since 0.0.1
  */
-public class Card {
-
+public class Card implements Comparable<Card> {
 
     /**
      * The rank of the card.
@@ -148,5 +147,20 @@ public class Card {
         }
 
         return rank == other.rank && suit == other.suit;
+    }
+
+    /**
+     * Compares this card with the specified card for order.
+     *
+     * @param other the card to be compared
+     * @return a negative integer, zero, or a positive integer as this card is less than, equal to, or greater than the specified card
+     */
+    @Override
+    public int compareTo(Card other) {
+        int rankCompare = Integer.compare(rank.getValue(), other.rank.getValue());
+        if (rankCompare != 0) {
+            return rankCompare;
+        }
+        return suit.compareTo(other.suit);
     }
 }
