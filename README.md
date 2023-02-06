@@ -8,6 +8,7 @@ jCards is a Java library for creating and manipulating a deck of playing cards. 
 - A `Card` class for representing individual cards, with convenient methods for getting the rank and suit of a card.
 - Overridden `toString()` method for easy printing of cards, making it simple to visualize the contents of a deck or individual cards.
 - Overridden `hashCode()` and `equals()` methods for efficient collections handling, allowing you to easily add, remove, and manipulate cards within collections.
+- The `UnicodeConstants` class serves as a container for Unicode representations of playing card suits and ranks. The class uses enumerations for suits and ranks to improve code readability and reduce the risk of typos.
 
 ## Getting Started
 
