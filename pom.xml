@@ -13,7 +13,7 @@
     <version>0.0.1</version>
     <packaging>jar</packaging>
 
-    <url>https://github.com/lyuda/jcards</url>
+    <url>https://github.com/lyudaio/jcards</url>
     <description>A Java library for creating and manipulating a deck of playing cards.</description>
 
     <licenses>
