@@ -11,7 +11,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 
 /**
- * Test class for the {@code Card} class.
+ * Test class for the {@link Card} class.
  *
  * @author lyudaio
  * @since 0.0.1
