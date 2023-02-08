@@ -4,7 +4,7 @@ package io.lyuda.jcards;
  * The `UnicodeConstants` class serves as a container for Unicode representations of playing card suits and ranks.
  * The class uses enumeration for suits and ranks to improve code readability and reduce the risk of typos.
  *
- * @author NullRSJ
+ * @author lyudaio
  * @since 0.0.1
  */
 public final class UnicodeConstants {

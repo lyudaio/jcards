@@ -18,7 +18,7 @@ import static org.junit.jupiter.api.Assertions.*;
  * <p>The purpose of this class is to thoroughly test the functionality of the {@link Deck} class.
  * All methods are tested to ensure that they behave as expected, and edge cases are also considered.
  *
- * @author NullRSJ
+ * @author lyudaio
  * @since 0.0.1
  */
 public class DeckTest {
@@ -36,7 +36,7 @@ public class DeckTest {
      * Test the creation of a new Deck of cards.
      * This test verifies that the deck is correctly initialized with 52 cards, each with a unique rank and suit.
      *
-     * @author NullRSJ
+     * @author lyudaio
      * @since 0.0.1
      */
     @Test

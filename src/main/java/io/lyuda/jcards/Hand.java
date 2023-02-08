@@ -12,7 +12,7 @@ import java.util.Optional;
  * obtain a list of the cards in the hand, get the size of the hand, sort the cards,
  * and find a specific card in the hand.
  *
- * @author NullRSJ
+ * @author lyudaio
  * @since 0.0.1
  */
 public class Hand {

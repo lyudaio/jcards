@@ -12,7 +12,7 @@ import java.util.List;
  * be shuffled and dealt from. The deck keeps track of the number of cards remaining and throws
  * an exception if an attempt is made to deal from an empty deck.
  *
- * @author NullRSJ
+ * @author lyudaio
  * @since 0.0.1
  */
 public class Deck implements Comparable<Deck> {

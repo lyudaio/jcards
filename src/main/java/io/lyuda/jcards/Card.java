@@ -8,7 +8,7 @@ import java.util.Objects;
  * This class provides methods to access the rank and suit of a card, as well as to compare
  * cards for equality and to obtain a string representation of a card.
  *
- * @author NullRSJ
+ * @author lyudaio
  * @since 0.0.1
  */
 public class Card implements Comparable<Card> {

@@ -13,7 +13,7 @@ import static org.junit.jupiter.api.Assertions.*;
 /**
  * Test class for the {@code Card} class.
  *
- * @author NullRSJ
+ * @author lyudaio
  * @since 0.0.1
  */
 public class CardTest {

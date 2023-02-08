@@ -14,7 +14,7 @@ import static org.junit.jupiter.api.Assertions.*;
  * {@link UnicodeConstants.Rank#getSymbol()} and {@link UnicodeConstants.Suit#getSymbol()}
  * methods.
  *
- * @author NullRSJ
+ * @author lyudaio
  * @since 0.0.1
  */
 
