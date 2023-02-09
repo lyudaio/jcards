@@ -55,7 +55,7 @@ public class Card implements Comparable<Card> {
     /**
      * The enumerated type representing the suit of a standard playing card.
      *
-     * @author NullRSJ
+     * @author lyudio
      * @since 0.0.1
      */
     public enum Suit {
