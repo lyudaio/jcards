@@ -4,7 +4,7 @@
   <img src="https://i.imgur.com/5xKGdIw.png" alt="Library Logo" height="200" width="200">
 </p>
 
-# jCards - A Java Library for Playing Cards
+# jCards - A Lightweight Java Library for Playing Cards
 
 jCards is a Java library for creating and manipulating a deck of playing cards. It is designed to be simple, intuitive, and easy to extend. With jCards, you can quickly and easily create and manipulate a deck of playing cards in your Java projects while retaining agnosticism towards the type of card game.
 
