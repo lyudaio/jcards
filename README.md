@@ -38,6 +38,10 @@ public class Main {
 
 This will output `ACE of SPADES`.
 
+# Documentation
+
+Documentation is automatically generated as Javadocs. We try to keep the library up to Javadoc standards so that the generated documentation is informative. [You can read the Javadocs here](https://lyuda.io).
+
 # Contributing
 
 We welcome and encourage contributions to jCards! Whether you're fixing a bug, adding a new feature, or simply improving the documentation, your help is greatly appreciated.
