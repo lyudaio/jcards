@@ -4,6 +4,7 @@ import java.security.SecureRandom;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Random;
 
 /**
  * The {@code Deck} class represents a deck of cards. It is used to create and manage a collection of cards.
@@ -37,11 +38,15 @@ public class Deck implements Comparable<Deck> {
     }
 
     /**
-     * Shuffles the deck using a cryptographically secure random number generator.
+     * Shuffles the deck of cards using a cryptographically secure random number generator.
+     *
+     * @see java.util.Collections#shuffle(List, Random)
+     * @see java.security.SecureRandom
      */
     public void shuffle() {
-        SecureRandom random = new SecureRandom();
-        Collections.shuffle(cards, random);
+        SecureRandom secureRandom = new SecureRandom();
+        long seed = secureRandom.nextLong();
+        Collections.shuffle(cards, new Random(seed));
     }
 
     /**
@@ -159,4 +164,19 @@ public class Deck implements Comparable<Deck> {
     }
 
 
+    /**
+     * Retrieves the most up-to-date list of cards stored in the object.
+     *
+     * @return A list of {@link Card} objects stored in the object, which reflects any changes made to the underlying list.
+     *
+     * <p> The returned list may be empty, but it will never be
+     * {@code null}.
+     *
+     * @see Card
+     * @author lyudaio
+     * @since 0.0.3
+     */
+    public List<Card> getCards() {
+        return cards;
+    }
 }
