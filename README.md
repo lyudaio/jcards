@@ -1,3 +1,5 @@
+![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/lyudaio/jcards?label=version&style=plastic) ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/lyudaio/jcards?style=plastic) ![GitHub](https://img.shields.io/github/license/lyudaio/jcards?style=plastic) ![GitHub deployments](https://img.shields.io/github/deployments/lyudaio/jcards/github-pages?label=Javadoc%20Deployment&style=plastic)
+
 <p align="center">
   <img src="https://i.imgur.com/5xKGdIw.png" alt="Library Logo" height="200" width="200">
 </p>
