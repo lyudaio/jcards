@@ -50,6 +50,27 @@ public class Deck implements Comparable<Deck> {
     }
 
     /**
+     * Deals a specified amount of cards from the deck.
+     *
+     * @param amount the number of cards to be dealt
+     * @return a list of dealt cards
+     * @throws IllegalStateException if the deck is empty or if the amount of cards to be dealt is greater than the number of cards in the deck
+     */
+    public List<Card> deal(int amount) {
+        if (cards.isEmpty()) {
+            throw new IllegalStateException("No more cards in the deck");
+        }
+        if (amount > cards.size()) {
+            throw new IllegalStateException("Cannot deal more cards than are in the deck");
+        }
+        List<Card> dealtCards = new ArrayList<>();
+        for (int i = 0; i < amount; i++) {
+            dealtCards.add(cards.remove(0));
+        }
+        return dealtCards;
+    }
+    
+    /**
      * Deals the next card from the deck.
      *
      * @return the next card in the deck
