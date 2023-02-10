@@ -63,18 +63,6 @@ public class Deck implements Comparable<Deck> {
     }
 
     /**
-     * Returns the number of cards remaining in the deck.
-     *
-     * @return the number of cards remaining in the deck
-     */
-    public int cardsRemaining() {
-        if (cards.isEmpty()) {
-            throw new IllegalStateException("No more cards in the deck");
-        }
-        return cards.size();
-    }
-
-    /**
      * Searches the deck for a specific card based on its rank and suit.
      *
      * @param rank the rank of the card to search for
