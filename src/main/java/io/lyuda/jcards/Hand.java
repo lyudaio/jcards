@@ -75,15 +75,15 @@ public class Hand {
     /**
      * Gets a list of all the cards in this hand.
      *
-     * @return an unmodifiable list of the cards in this hand
+     * @return a modifiable list of the cards in this hand
      */
     public List<Card> getCards() {
-        return Collections.unmodifiableList(cards);
+        return cards;
     }
 
     /**
      * Sorts the cards in this hand.
-     *
+     * <p>
      * This method uses the Collections framework to sort the cards stored in the `cards` list based on their natural ordering,
      * as determined by the `compareTo()` method implemented in the `Card` class.
      *

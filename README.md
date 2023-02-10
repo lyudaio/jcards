@@ -15,6 +15,7 @@ jCards is a Java library for creating and manipulating a deck of playing cards. 
 - The `UnicodeConstants` class serves as a container for Unicode representations of playing card suits and ranks. The class uses enumerations for suits and ranks to improve code readability and reduce the risk of typos.
 - A Player class to represent a player in a card game, providing methods to manage their hand, add and remove cards, and access their name.
 - Agnostic design to allow for use in various types of card games.
+- <b>DeckFactory</b> class to manage multiple decks at a time.
 
 ## Getting Started
 

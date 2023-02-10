@@ -6,6 +6,7 @@ import org.junit.jupiter.api.BeforeEach;
 
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -52,7 +53,6 @@ public class DeckTest {
         }
     }
 
-
     /**
      * Tests shuffling the deck of cards.
      *
@@ -61,13 +61,16 @@ public class DeckTest {
      */
     @Test
     public void testShuffle() {
-        Deck deck1 = new Deck();
-        deck1.shuffle();
-
-        Deck deck2 = new Deck();
-        deck2.shuffle();
-
-        assertNotEquals(deck1.toString(), deck2.toString());
+        Deck deck = new Deck();
+        List<Card> originalCards = new ArrayList<>(deck.getCards());
+        deck.shuffle();
+        int matchCount = 0;
+        for (int i = 0; i < originalCards.size(); i++) {
+            if (originalCards.get(i).equals(deck.getCards().get(i))) {
+                matchCount++;
+            }
+        }
+        assertNotEquals(matchCount, originalCards.size(), "The deck was randomly shuffled into the same order");
     }
 
     /**
@@ -106,8 +109,11 @@ public class DeckTest {
         Deck deck = new Deck();
         deck.shuffle();
         int indexOfSevenOfSpades = deck.findCard(Card.Rank.SEVEN, Card.Suit.SPADES);
-        assertTrue(indexOfSevenOfSpades >= 0 && indexOfSevenOfSpades <= 51, "The index of the 7 of Spades should be between 0 and 51, inclusive");
+        Card foundCard = deck.getCards().get(indexOfSevenOfSpades);
+        assertEquals(Card.Rank.SEVEN, foundCard.getRank(), "The found card's rank should be SEVEN");
+        assertEquals(Card.Suit.SPADES, foundCard.getSuit(), "The found card's suit should be SPADES");
     }
+
 
     /**
      * Test the findCardsByRank() method to verify that it correctly returns a list of the indices
