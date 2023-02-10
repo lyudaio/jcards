@@ -83,7 +83,7 @@ public class Hand {
 
     /**
      * Sorts the cards in this hand.
-     *
+     * <p>
      * This method uses the Collections framework to sort the cards stored in the `cards` list based on their natural ordering,
      * as determined by the `compareTo()` method implemented in the `Card` class.
      *

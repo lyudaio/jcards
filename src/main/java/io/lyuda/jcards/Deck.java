@@ -155,8 +155,8 @@ public class Deck implements Comparable<Deck> {
      *
      * @param o the deck to compare to
      * @return a negative integer if this deck has less cards than `o`,
-     *         zero if this deck has the same number of cards as `o`,
-     *         or a positive integer if this deck has more cards than `o`.
+     * zero if this deck has the same number of cards as `o`,
+     * or a positive integer if this deck has more cards than `o`.
      */
     @Override
     public int compareTo(Deck o) {
@@ -171,12 +171,21 @@ public class Deck implements Comparable<Deck> {
      *
      * <p> The returned list may be empty, but it will never be
      * {@code null}.
-     *
-     * @see Card
      * @author lyudaio
+     * @see Card
      * @since 0.0.3
      */
     public List<Card> getCards() {
         return cards;
     }
+
+    /**
+     * Sorts the deck of cards using the {@link Card#compareTo(Card)} method.
+     *
+     * @see java.util.Collections#sort(List)
+     */
+    public void sort() {
+        Collections.sort(cards);
+    }
+
 }
