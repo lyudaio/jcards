@@ -1,11 +1,11 @@
-
 import io.lyuda.jcards.Card;
+import io.lyuda.jcards.Rank;
+import io.lyuda.jcards.Suit;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.util.Objects;
-import  io.lyuda.jcards.Suit;
-import  io.lyuda.jcards.Rank;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 
@@ -181,7 +181,7 @@ public class CardTest {
     public void testEquals_equalObjects() {
         Card card1 = new Card(Rank.ACE, Suit.CLUBS);
         Card card2 = new Card(Rank.ACE, Suit.CLUBS);
-        assertTrue(card1.equals(card2));
+        assertEquals(card1, card2);
     }
 
     /**
@@ -192,7 +192,7 @@ public class CardTest {
     public void testEquals_notEqualObjects() {
         Card card1 = new Card(Rank.ACE, Suit.CLUBS);
         Card card2 = new Card(Rank.ACE, Suit.HEARTS);
-        assertFalse(card1.equals(card2));
+        assertNotEquals(card1, card2);
     }
 
 }

@@ -12,7 +12,6 @@ public class DeckFactoryTest {
      * Test case for the {@link DeckFactory#createDeck()} method.
      * This test ensures that the createDeck() method correctly creates a new non-null {@link Deck} object to be managed by
      * {@link DeckFactory}.
-     *
      */
     @Test
     public void testCreateDeck() {
@@ -112,7 +111,7 @@ public class DeckFactoryTest {
         Deck deck2 = factory.createDeck();
         List<Deck> decks = factory.getDecks();
 
-        for (Deck deck:decks) {
+        for (Deck deck : decks) {
             deck.shuffle();
         }
 

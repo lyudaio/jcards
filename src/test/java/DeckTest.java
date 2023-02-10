@@ -1,11 +1,8 @@
-
-
 import io.lyuda.jcards.Card;
 import io.lyuda.jcards.Deck;
 import io.lyuda.jcards.Rank;
 import io.lyuda.jcards.Suit;
 import org.junit.jupiter.api.BeforeEach;
-
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -184,6 +181,53 @@ public class DeckTest {
 
         indices = deck.findCardsBySuit(Suit.SPADES);
         assertEquals(13, indices.size());
+    }
+
+
+    /**
+     * Tests the {@link Deck#deal(int)} method when the deck is empty.
+     */
+    @Test
+    public void testDealFromEmptyDeck() {
+        Deck deck = new Deck();
+        deck.shuffle();
+        deck.clear();
+        IllegalStateException exception = assertThrows(IllegalStateException.class, () -> {
+            deck.deal(1);
+        });
+        assertEquals("No more cards in the deck", exception.getMessage());
+    }
+
+    /**
+     * Tests the {@link Deck#deal(int)} method when the amount of cards to be dealt is greater than the number of cards in the deck.
+     */
+    @Test
+    public void testDealMoreCardsThanInDeck() {
+        Deck deck = new Deck();
+        deck.shuffle();
+        IllegalStateException exception = assertThrows(IllegalStateException.class, () -> {
+            deck.deal(53);
+        });
+        assertEquals("Cannot deal more cards than are in the deck", exception.getMessage());
+    }
+
+    /**
+     * Tests the {@link Deck#deal(int)} method when the deck is not empty and the amount of cards to be dealt is less than or equal to the number of cards in the deck.
+     */
+    @Test
+    public void testDealFromNonEmptyDeck() {
+        Deck deck = new Deck();
+        deck.shuffle();
+        List<Card> dealtCards = deck.deal(5);
+        assertEquals(5, dealtCards.size());
+        assertEquals(47, deck.getCards().size());
+    }
+
+    @Test
+    public void testClear() {
+        Deck deck = new Deck();
+        deck.clear();
+        assertEquals(0, deck.getSize());
     }
 
 }

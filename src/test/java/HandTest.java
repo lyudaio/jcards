@@ -1,4 +1,3 @@
-
 import io.lyuda.jcards.Card;
 import io.lyuda.jcards.Hand;
 import io.lyuda.jcards.Rank;
@@ -17,8 +16,8 @@ import static org.junit.jupiter.api.Assertions.*;
  * Unit tests for the {@link Hand} class.
  *
  * @author lyudaio
- * @since 0.0.1
  * @see Hand
+ * @since 0.0.1
  */
 @DisplayName("Hand Class Unit Tests")
 class HandTest {
