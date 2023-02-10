@@ -2,6 +2,7 @@
 
 import io.lyuda.jcards.Card;
 import io.lyuda.jcards.Deck;
+import io.lyuda.jcards.Rank;
 import org.junit.jupiter.api.BeforeEach;
 
 import org.junit.jupiter.api.Test;
@@ -82,9 +83,9 @@ public class DeckTest {
      */
     @Test
     public void testDeal() {
-        int size1 = deck.cardsRemaining();
+        int size1 = deck.getSize();
         deck.deal();
-        int size2 = deck.cardsRemaining();
+        int size2 = deck.getSize();
 
         assertEquals(size1 - 1, size2);
 
@@ -108,9 +109,9 @@ public class DeckTest {
     public void testFindCard() {
         Deck deck = new Deck();
         deck.shuffle();
-        int indexOfSevenOfSpades = deck.findCard(Card.Rank.SEVEN, Card.Suit.SPADES);
+        int indexOfSevenOfSpades = deck.findCard(Rank.SEVEN, Card.Suit.SPADES);
         Card foundCard = deck.getCards().get(indexOfSevenOfSpades);
-        assertEquals(Card.Rank.SEVEN, foundCard.getRank(), "The found card's rank should be SEVEN");
+        assertEquals(Rank.SEVEN, foundCard.getRank(), "The found card's rank should be SEVEN");
         assertEquals(Card.Suit.SPADES, foundCard.getSuit(), "The found card's suit should be SPADES");
     }
 
@@ -123,43 +124,43 @@ public class DeckTest {
     public void testFindCardsByRank() {
         Deck deck = new Deck();
 
-        List<Integer> indices = deck.findCardsByRank(Card.Rank.ACE);
+        List<Integer> indices = deck.findCardsByRank(Rank.ACE);
         assertEquals(4, indices.size());
 
-        indices = deck.findCardsByRank(Card.Rank.FIVE);
+        indices = deck.findCardsByRank(Rank.FIVE);
         assertEquals(4, indices.size());
 
-        indices = deck.findCardsByRank(Card.Rank.KING);
+        indices = deck.findCardsByRank(Rank.KING);
         assertEquals(4, indices.size());
 
-        indices = deck.findCardsByRank(Card.Rank.JACK);
+        indices = deck.findCardsByRank(Rank.JACK);
         assertEquals(4, indices.size());
 
-        indices = deck.findCardsByRank(Card.Rank.QUEEN);
+        indices = deck.findCardsByRank(Rank.QUEEN);
         assertEquals(4, indices.size());
 
-        indices = deck.findCardsByRank(Card.Rank.TEN);
+        indices = deck.findCardsByRank(Rank.TEN);
         assertEquals(4, indices.size());
 
-        indices = deck.findCardsByRank(Card.Rank.NINE);
+        indices = deck.findCardsByRank(Rank.NINE);
         assertEquals(4, indices.size());
 
-        indices = deck.findCardsByRank(Card.Rank.EIGHT);
+        indices = deck.findCardsByRank(Rank.EIGHT);
         assertEquals(4, indices.size());
 
-        indices = deck.findCardsByRank(Card.Rank.SEVEN);
+        indices = deck.findCardsByRank(Rank.SEVEN);
         assertEquals(4, indices.size());
 
-        indices = deck.findCardsByRank(Card.Rank.SIX);
+        indices = deck.findCardsByRank(Rank.SIX);
         assertEquals(4, indices.size());
 
-        indices = deck.findCardsByRank(Card.Rank.FOUR);
+        indices = deck.findCardsByRank(Rank.FOUR);
         assertEquals(4, indices.size());
 
-        indices = deck.findCardsByRank(Card.Rank.THREE);
+        indices = deck.findCardsByRank(Rank.THREE);
         assertEquals(4, indices.size());
 
-        indices = deck.findCardsByRank(Card.Rank.TWO);
+        indices = deck.findCardsByRank(Rank.TWO);
         assertEquals(4, indices.size());
     }
 

@@ -1,5 +1,6 @@
 import io.lyuda.jcards.Card;
 import io.lyuda.jcards.Hand;
+import io.lyuda.jcards.Rank;
 import io.lyuda.jcards.game.Player;
 import org.junit.jupiter.api.Test;
 
@@ -38,7 +39,7 @@ public class PlayerTest {
     @Test
     void testAddCard() {
         Player player = new Player("Jim Doe");
-        Card card = new Card(Card.Rank.ACE, Card.Suit.CLUBS);
+        Card card = new Card(Rank.ACE, Card.Suit.CLUBS);
         player.addCard(card);
         assertEquals(1, player.getHand().getCards().size());
     }
@@ -49,7 +50,7 @@ public class PlayerTest {
     @Test
     void testRemoveCard() {
         Player player = new Player("Jack Doe");
-        Card card = new Card(Card.Rank.ACE, Card.Suit.CLUBS);
+        Card card = new Card(Rank.ACE, Card.Suit.CLUBS);
         player.addCard(card);
         player.removeCard(card);
         assertEquals(0, player.getHand().getCards().size());
