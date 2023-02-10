@@ -67,11 +67,11 @@ public class Deck implements Comparable<Deck> {
      *
      * @param rank the rank of the card to search for
      * @param suit the suit of the card to search for
-     * @return the index of the card in the deck, or -1 if the card is not found
+     * @return the index of the card in the deck, 0 if empty, or -1 if the card is not found
      */
     public int findCard(Card.Rank rank, Card.Suit suit) {
         if (cards.isEmpty()) {
-            throw new IllegalStateException("No more cards in the deck");
+            return 0;
         }
 
         for (int i = 0; i < cards.size(); i++) {
