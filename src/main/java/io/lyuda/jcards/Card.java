@@ -1,6 +1,5 @@
 package io.lyuda.jcards;
 
-import io.lyuda.jcards.Rank;
 import java.util.Objects;
 
 
@@ -69,6 +68,7 @@ public class Card implements Comparable<Card> {
 
     /**
      * Overrides the default hashCode method and returns a hash code based on the rank and suit values of this Card.
+     *
      * @return an int value representing the hash code of this Card object.
      */
     @Override
@@ -83,7 +83,7 @@ public class Card implements Comparable<Card> {
      *
      * @param obj the object to compare with this card
      * @return {@code true} if the specified object is equal to this card,
-     *         {@code false} otherwise.
+     * {@code false} otherwise.
      */
     @Override
     public boolean equals(Object obj) {

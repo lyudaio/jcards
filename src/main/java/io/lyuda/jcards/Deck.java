@@ -23,7 +23,7 @@ public class Deck implements Comparable<Deck> {
      * It is used to store and manage all the cards in the deck.
      * This variable is private and is only accessible within the class.
      */
-    private List<Card> cards;
+    private final List<Card> cards;
 
     /**
      * Creates a new deck of cards with all the possible combinations of suits and ranks.
@@ -195,6 +195,13 @@ public class Deck implements Comparable<Deck> {
      */
     public void sort() {
         Collections.sort(cards);
+    }
+
+    /**
+     * Clears all the cards from the deck.
+     */
+    public void clear() {
+        cards.clear();
     }
 
 }
