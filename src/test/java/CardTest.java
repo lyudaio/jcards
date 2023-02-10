@@ -4,9 +4,8 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.util.Objects;
-
+import  io.lyuda.jcards.Suit;
 import  io.lyuda.jcards.Rank;
-import static io.lyuda.jcards.Card.Suit;
 import static org.junit.jupiter.api.Assertions.*;
 
 
@@ -24,7 +23,7 @@ public class CardTest {
      */
     @Test
     public void testCard_validInput() {
-        Card card = new Card(Rank.ACE, Card.Suit.CLUBS);
+        Card card = new Card(Rank.ACE, Suit.CLUBS);
         assertNotNull(card);
     }
 
@@ -35,7 +34,7 @@ public class CardTest {
     @Test
     public void testCard_nullRank() {
         Assertions.assertThrows(IllegalArgumentException.class, () -> {
-            new Card(null, Card.Suit.CLUBS);
+            new Card(null, Suit.CLUBS);
         });
     }
 
@@ -57,7 +56,7 @@ public class CardTest {
      */
     @Test
     public void testGetRank() {
-        Card card = new Card(Rank.ACE, Card.Suit.CLUBS);
+        Card card = new Card(Rank.ACE, Suit.CLUBS);
         assertEquals(Rank.ACE, card.getRank());
     }
 
@@ -66,8 +65,8 @@ public class CardTest {
      */
     @Test
     public void testGetSuit() {
-        Card card = new Card(Rank.ACE, Card.Suit.CLUBS);
-        assertEquals(Card.Suit.CLUBS, card.getSuit());
+        Card card = new Card(Rank.ACE, Suit.CLUBS);
+        assertEquals(Suit.CLUBS, card.getSuit());
     }
 
     /**
@@ -84,8 +83,8 @@ public class CardTest {
      */
     @Test
     public void testHashCode() {
-        Card card = new Card(Rank.ACE, Card.Suit.CLUBS);
-        int expectedHashCode = Objects.hash(Rank.ACE, Card.Suit.CLUBS);
+        Card card = new Card(Rank.ACE, Suit.CLUBS);
+        int expectedHashCode = Objects.hash(Rank.ACE, Suit.CLUBS);
         assertEquals(expectedHashCode, card.hashCode());
     }
 
@@ -180,8 +179,8 @@ public class CardTest {
      */
     @Test
     public void testEquals_equalObjects() {
-        Card card1 = new Card(Rank.ACE, Card.Suit.CLUBS);
-        Card card2 = new Card(Rank.ACE, Card.Suit.CLUBS);
+        Card card1 = new Card(Rank.ACE, Suit.CLUBS);
+        Card card2 = new Card(Rank.ACE, Suit.CLUBS);
         assertTrue(card1.equals(card2));
     }
 
@@ -191,8 +190,8 @@ public class CardTest {
      */
     @Test
     public void testEquals_notEqualObjects() {
-        Card card1 = new Card(Rank.ACE, Card.Suit.CLUBS);
-        Card card2 = new Card(Rank.ACE, Card.Suit.HEARTS);
+        Card card1 = new Card(Rank.ACE, Suit.CLUBS);
+        Card card2 = new Card(Rank.ACE, Suit.HEARTS);
         assertFalse(card1.equals(card2));
     }
 

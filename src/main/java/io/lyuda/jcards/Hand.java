@@ -102,7 +102,7 @@ public class Hand {
      * @param suit the suit of the card to find
      * @return an {@link Optional} containing the found card, or an empty {@link Optional} if no such card was found
      */
-    public Optional<Card> findCard(Rank rank, Card.Suit suit) {
+    public Optional<Card> findCard(Rank rank, Suit suit) {
         return cards.stream().filter(c -> c.getRank() == rank && c.getSuit() == suit).findFirst();
     }
 

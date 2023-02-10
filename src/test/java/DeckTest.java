@@ -3,6 +3,7 @@
 import io.lyuda.jcards.Card;
 import io.lyuda.jcards.Deck;
 import io.lyuda.jcards.Rank;
+import io.lyuda.jcards.Suit;
 import org.junit.jupiter.api.BeforeEach;
 
 import org.junit.jupiter.api.Test;
@@ -109,10 +110,10 @@ public class DeckTest {
     public void testFindCard() {
         Deck deck = new Deck();
         deck.shuffle();
-        int indexOfSevenOfSpades = deck.findCard(Rank.SEVEN, Card.Suit.SPADES);
+        int indexOfSevenOfSpades = deck.findCard(Rank.SEVEN, Suit.SPADES);
         Card foundCard = deck.getCards().get(indexOfSevenOfSpades);
         assertEquals(Rank.SEVEN, foundCard.getRank(), "The found card's rank should be SEVEN");
-        assertEquals(Card.Suit.SPADES, foundCard.getSuit(), "The found card's suit should be SPADES");
+        assertEquals(Suit.SPADES, foundCard.getSuit(), "The found card's suit should be SPADES");
     }
 
 
@@ -172,16 +173,16 @@ public class DeckTest {
     public void testFindCardsBySuit() {
         Deck deck = new Deck();
 
-        List<Integer> indices = deck.findCardsBySuit(Card.Suit.HEARTS);
+        List<Integer> indices = deck.findCardsBySuit(Suit.HEARTS);
         assertEquals(13, indices.size());
 
-        indices = deck.findCardsBySuit(Card.Suit.DIAMONDS);
+        indices = deck.findCardsBySuit(Suit.DIAMONDS);
         assertEquals(13, indices.size());
 
-        indices = deck.findCardsBySuit(Card.Suit.CLUBS);
+        indices = deck.findCardsBySuit(Suit.CLUBS);
         assertEquals(13, indices.size());
 
-        indices = deck.findCardsBySuit(Card.Suit.SPADES);
+        indices = deck.findCardsBySuit(Suit.SPADES);
         assertEquals(13, indices.size());
     }
 

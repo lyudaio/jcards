@@ -14,19 +14,6 @@ import java.util.Objects;
  */
 public class Card implements Comparable<Card> {
 
-    /**
-     * The enumerated type representing the suit of a standard playing card.
-     *
-     * @author lyudio
-     * @since 0.0.1
-     */
-    public enum Suit {
-        CLUBS,
-        DIAMONDS,
-        HEARTS,
-        SPADES
-    }
-
     private final Rank rank;
     private final Suit suit;
 

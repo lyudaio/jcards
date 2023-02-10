@@ -1,6 +1,5 @@
 package io.lyuda.jcards;
 
-import io.lyuda.jcards.Rank;
 import java.security.SecureRandom;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -31,7 +30,7 @@ public class Deck implements Comparable<Deck> {
      */
     public Deck() {
         cards = new ArrayList<>();
-        for (Card.Suit suit : Card.Suit.values()) {
+        for (Suit suit : Suit.values()) {
             for (Rank rank : Rank.values()) {
                 cards.add(new Card(rank, suit));
             }
@@ -91,7 +90,7 @@ public class Deck implements Comparable<Deck> {
      * @param suit the suit of the card to search for
      * @return the index of the card in the deck, 0 if empty, or -1 if the card is not found
      */
-    public int findCard(Rank rank, Card.Suit suit) {
+    public int findCard(Rank rank, Suit suit) {
         if (cards.isEmpty()) {
             return 0;
         }
@@ -127,7 +126,7 @@ public class Deck implements Comparable<Deck> {
      * @param suit the suit to search for
      * @return a list of the indices of the cards in the deck with the specified suit
      */
-    public List<Integer> findCardsBySuit(Card.Suit suit) {
+    public List<Integer> findCardsBySuit(Suit suit) {
         List<Integer> indices = new ArrayList<>();
         for (int i = 0; i < cards.size(); i++) {
             if (cards.get(i).getSuit() == suit) {
