@@ -1,10 +1,6 @@
 package io.lyuda.jcards;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Objects;
-import java.util.Optional;
+import java.util.*;
 
 /**
  * The {@code Hand} class represents a hand of cards in a card game.
@@ -102,7 +98,7 @@ public class Hand {
      * @param suit the suit of the card to find
      * @return an {@link Optional} containing the found card, or an empty {@link Optional} if no such card was found
      */
-    public Optional<Card> findCard(Card.Rank rank, Card.Suit suit) {
+    public Optional<Card> findCard(Rank rank, Suit suit) {
         return cards.stream().filter(c -> c.getRank() == rank && c.getSuit() == suit).findFirst();
     }
 

@@ -1,6 +1,7 @@
-
 import io.lyuda.jcards.Card;
 import io.lyuda.jcards.Hand;
+import io.lyuda.jcards.Rank;
+import io.lyuda.jcards.Suit;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -15,8 +16,8 @@ import static org.junit.jupiter.api.Assertions.*;
  * Unit tests for the {@link Hand} class.
  *
  * @author lyudaio
- * @since 0.0.1
  * @see Hand
+ * @since 0.0.1
  */
 @DisplayName("Hand Class Unit Tests")
 class HandTest {
@@ -48,9 +49,9 @@ class HandTest {
     @BeforeEach
     void setUp() {
         hand = new Hand();
-        aceOfSpades = new Card(Card.Rank.ACE, Card.Suit.SPADES);
-        kingOfHearts = new Card(Card.Rank.KING, Card.Suit.HEARTS);
-        queenOfDiamonds = new Card(Card.Rank.QUEEN, Card.Suit.DIAMONDS);
+        aceOfSpades = new Card(Rank.ACE, Suit.SPADES);
+        kingOfHearts = new Card(Rank.KING, Suit.HEARTS);
+        queenOfDiamonds = new Card(Rank.QUEEN, Suit.DIAMONDS);
     }
 
     /**
@@ -156,8 +157,8 @@ class HandTest {
 
         Optional<Card> expectedCard = Optional.of(aceOfSpades);
 
-        assertEquals(expectedCard, hand.findCard(Card.Rank.ACE, Card.Suit.SPADES));
-        assertEquals(Optional.empty(), hand.findCard(Card.Rank.QUEEN, Card.Suit.DIAMONDS));
+        assertEquals(expectedCard, hand.findCard(Rank.ACE, Suit.SPADES));
+        assertEquals(Optional.empty(), hand.findCard(Rank.QUEEN, Suit.DIAMONDS));
     }
 
     /**

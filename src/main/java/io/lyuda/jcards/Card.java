@@ -13,58 +13,6 @@ import java.util.Objects;
  */
 public class Card implements Comparable<Card> {
 
-    /**
-     * The rank of the card.
-     */
-    public enum Rank {
-        ACE(1),
-        TWO(2),
-        THREE(3),
-        FOUR(4),
-        FIVE(5),
-        SIX(6),
-        SEVEN(7),
-        EIGHT(8),
-        NINE(9),
-        TEN(10),
-        JACK(11),
-        QUEEN(12),
-        KING(13);
-
-        private final int value;
-
-        /**
-         * Constructs a new {@code Rank} with the specified value.
-         *
-         * @param value the value of the rank
-         */
-        Rank(int value) {
-            this.value = value;
-        }
-
-        /**
-         * Returns the value of the rank.
-         *
-         * @return the value of the rank
-         */
-        public int getValue() {
-            return value;
-        }
-    }
-
-    /**
-     * The enumerated type representing the suit of a standard playing card.
-     *
-     * @author lyudio
-     * @since 0.0.1
-     */
-    public enum Suit {
-        CLUBS,
-        DIAMONDS,
-        HEARTS,
-        SPADES
-    }
-
     private final Rank rank;
     private final Suit suit;
 
@@ -120,6 +68,7 @@ public class Card implements Comparable<Card> {
 
     /**
      * Overrides the default hashCode method and returns a hash code based on the rank and suit values of this Card.
+     *
      * @return an int value representing the hash code of this Card object.
      */
     @Override
@@ -134,7 +83,7 @@ public class Card implements Comparable<Card> {
      *
      * @param obj the object to compare with this card
      * @return {@code true} if the specified object is equal to this card,
-     *         {@code false} otherwise.
+     * {@code false} otherwise.
      */
     @Override
     public boolean equals(Object obj) {

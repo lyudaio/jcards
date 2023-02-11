@@ -20,7 +20,7 @@ public class DeckFactory {
      * It is used to store and manage all the decks created by the factory.
      * This variable is private and is only accessible within the class.
      */
-    private List<Deck> decks;
+    private final List<Deck> decks;
 
 
     /**
