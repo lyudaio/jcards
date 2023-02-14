@@ -12,7 +12,6 @@ import java.util.Objects;
  * @since 0.0.1
  */
 public class Card implements Comparable<Card> {
-
     private final Rank rank;
     private final Suit suit;
 
