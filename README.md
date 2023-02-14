@@ -42,7 +42,7 @@ This will output `ACE of SPADES`.
 
 # Documentation
 
-Documentation is automatically generated as Javadocs. We try to keep the library up to Javadoc standards so that the generated documentation is informative. [You can read the Javadocs here](https://lyuda.io).
+Documentation is automatically generated as Javadocs. We try to keep the library up to Javadoc standards so that the generated documentation is informative. [You can read the Javadocs here](http://jcards.lyuda.io).
 
 # Contributing
 
