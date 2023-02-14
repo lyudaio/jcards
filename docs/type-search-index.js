@@ -1,1 +1,0 @@
-typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"io.lyuda.jcards","l":"Card"},{"p":"io.lyuda.jcards","l":"Deck"},{"p":"io.lyuda.jcards","l":"DeckFactory"},{"p":"io.lyuda.jcards","l":"Hand"},{"p":"io.lyuda.jcards.game","l":"Player"},{"p":"io.lyuda.jcards","l":"Rank"},{"p":"io.lyuda.jcards","l":"Suit"}];updateSearchResults();

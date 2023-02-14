@@ -5,7 +5,7 @@ package io.lyuda.jcards;
  * playing cards. Constants are defined by invoking paths from the {@link Rank} and
  * {@link Suit} Enums.
  *
- * @author lyudaio
+ * @author lyudaio, Narkoleptika (Creator of the Paths)
  * @since 0.0.5
  */
 public class CardImage {

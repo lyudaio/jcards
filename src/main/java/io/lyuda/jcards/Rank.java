@@ -4,7 +4,7 @@ package io.lyuda.jcards;
  * The {@code Rank} enum represents the rank of a playing card.
  * Each rank is associated with a numerical value and a unicode symbol.
  *
- * @author lyudaio
+ * @author lyudaio, Narkoleptika (Creator of the Paths)
  * @since 0.0.4
  */
 public enum Rank {

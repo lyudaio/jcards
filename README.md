@@ -10,6 +10,7 @@ jCards is a Java library for creating and manipulating a deck of playing cards. 
 
 ## Features
 
+- Programmatically generated card images to SVG
 - Enumerated types for Rank and Suit, providing a convenient and efficient way to represent the various ranks and suits of a deck of cards.
 - A `Card` class for representing individual cards, with convenient methods for getting the rank and suit of a card.
 - Overridden `toString()` method for easy printing of cards, making it simple to visualize the contents of a deck or individual cards.

@@ -4,7 +4,7 @@ package io.lyuda.jcards;
  * The {@code Suit} enum represents the suit of a playing card.
  * Each suit is associated with a unicode symbol, a color and a path.
  *
- * @author lyudaio
+ * @author lyudaio, Narkoleptika (Creator of the Paths)
  * @since 0.0.4
  */
 public enum Suit {
