@@ -12,7 +12,6 @@ import java.util.Objects;
  * @since 0.0.1
  */
 public class Card implements Comparable<Card> {
-
     private final Rank rank;
     private final Suit suit;
 
@@ -53,6 +52,16 @@ public class Card implements Comparable<Card> {
         return suit;
     }
 
+    /**
+     * This method returns a String representation of an SVG image built from the
+     * {@link CardImage} class.
+     *
+     * @return a String representation of an SVG image.
+     * @see CardImage
+     */
+    public String getSVG() {
+        return CardImage.makeCard(suit.getPath(), rank.getPath(), CardImage.Card.CARD.getColor(), suit.getColor());
+    }
 
     /**
      * Returns a string representation of the card.
