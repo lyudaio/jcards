@@ -31,6 +31,17 @@ public class DiceTest {
     }
 
     /**
+     * Tests the default consturctor.
+     */
+    @Test
+    public void testDice_DefaultConstructor() {
+        Dice dice = new Dice();
+
+        assertNotNull(dice);
+        assertEquals(dice.getSides(), 6);
+    }
+
+    /**
      * Tests getSides.
      */
     @Test
@@ -52,5 +63,29 @@ public class DiceTest {
             assertTrue(result >= 1 & result <= dice.getSides());
     
         }
+    }
+
+    /**
+     * Tests that the getLastRoll method throws an exception if the dice has not been rolled yet.
+     */
+    @Test
+    public void testDice_getLastRoll_beforeRolling() {
+        Dice dice = new Dice();
+        assertThrows(IllegalStateException.class,() -> {
+            dice.getLastRoll();
+        });
+    }
+
+    /**
+     * Tests that the getLastRoll method works and that the lastRoll gets updated between rolls. 
+     */
+    @Test
+    public void testDice_getLastRoll() {
+        Dice dice = new Dice();
+        int result = dice.roll();
+        assertEquals(result,dice.getLastRoll());
+        
+        result = dice.roll(); 
+        assertEquals(result,dice.getLastRoll());
     }
 }    
