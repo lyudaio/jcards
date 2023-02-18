@@ -22,6 +22,8 @@ jCards is a Java library for creating and manipulating a deck of playing cards. 
 
 ## Getting Started
 
+Make sure you have `Java 17 LTS` installed
+
 To use jCards in your project, simply include the latest version of the library in your classpath. You can download the latest version from the releases page on GitHub.
 
 Here is a simple example of how to use jCards:
