@@ -1,5 +1,6 @@
 import io.lyuda.jcards.Card;
 import io.lyuda.jcards.Deck;
+import io.lyuda.jcards.Hand;
 import io.lyuda.jcards.Rank;
 import io.lyuda.jcards.Suit;
 import org.junit.jupiter.api.BeforeEach;
@@ -97,6 +98,23 @@ public class DeckTest {
         } catch (IllegalStateException e) {
             assertEquals("No more cards in the deck", e.getMessage());
         }
+    }
+
+    /**
+     * Tests splitting the deck into two hands.
+     * 
+     * <p>This test verifies that the deck is split into two hands, and that the cards are distributed
+     * evenly between the two hands.
+     */
+    @Test
+    public void testSplit() {
+        List<Hand> hands = deck.split(2);
+        assertEquals(hands.size(), 2);
+        assertTrue(hands.get(0).getCards().contains(new Card(Rank.ACE, Suit.HEARTS)));
+        assertFalse(hands.get(1).getCards().contains(new Card(Rank.ACE, Suit.HEARTS)));
+        assertTrue(hands.get(1).getCards().contains(new Card(Rank.TWO, Suit.HEARTS)));
+        assertFalse(hands.get(0).getCards().contains(new Card(Rank.TWO, Suit.HEARTS)));
+        assertEquals(hands.get(0).size() + hands.get(1).size(), 52);
     }
 
     /**
