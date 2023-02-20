@@ -27,9 +27,9 @@ class RankTest {
         assertEquals(8, Rank.EIGHT.getValue());
         assertEquals(9, Rank.NINE.getValue());
         assertEquals(10, Rank.TEN.getValue());
-        assertEquals(10, Rank.JACK.getValue());
-        assertEquals(10, Rank.QUEEN.getValue());
-        assertEquals(10, Rank.KING.getValue());
+        assertEquals(11, Rank.JACK.getValue());
+        assertEquals(12, Rank.QUEEN.getValue());
+        assertEquals(13, Rank.KING.getValue());
     }
 
     /**
