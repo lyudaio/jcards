@@ -25,6 +25,7 @@ public class Deck implements Comparable<Deck> {
      */
     private final List<Card> cards;
 
+    private final SecureRandom secureRandom;
     /**
      * Creates a new deck of cards with all the possible combinations of suits and ranks.
      */
@@ -35,6 +36,7 @@ public class Deck implements Comparable<Deck> {
                 cards.add(new Card(rank, suit));
             }
         }
+        this.secureRandom = new SecureRandom();
     }
 
     /**
@@ -44,7 +46,6 @@ public class Deck implements Comparable<Deck> {
      * @see java.security.SecureRandom
      */
     public void shuffle() {
-        SecureRandom secureRandom = new SecureRandom();
         long seed = secureRandom.nextLong();
         Collections.shuffle(cards, new Random(seed));
     }
@@ -204,4 +205,7 @@ public class Deck implements Comparable<Deck> {
         cards.clear();
     }
 
+    public SecureRandom getSecureRandom() {
+        return secureRandom;
+    }
 }
