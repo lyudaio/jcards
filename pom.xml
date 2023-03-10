@@ -10,7 +10,7 @@
     </distributionManagement>
     <groupId>io.lyuda</groupId>
     <artifactId>jcards</artifactId>
-    <version>0.0.5</version>
+    <version>0.0.6</version>
     <packaging>jar</packaging>
 
     <url>https://github.com/lyudaio/jcards</url>
