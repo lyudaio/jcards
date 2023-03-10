@@ -5,6 +5,8 @@ import java.security.SecureRandom;
 /**
  * The {@code Dice} class represents a dice with an arbitrary amount of sides, defined in the constructor (six by default).
  * This class contains methods to access the number of sides, as well as rolling the dice to generate a random number.
+ * The class uses a cryptographically secure random number generator to generate the random number. The class also
+ * keeps track of the last result of the roll() method.
  *
  * @author KonnosBaz, lyudaio
  * @see java.security.SecureRandom
