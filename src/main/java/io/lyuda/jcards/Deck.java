@@ -3,6 +3,7 @@ package io.lyuda.jcards;
 import java.security.SecureRandom;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Random;
 
@@ -81,6 +82,32 @@ public class Deck implements Comparable<Deck> {
             throw new IllegalStateException("No more cards in the deck");
         }
         return cards.remove(0);
+    }
+
+    /**
+     * Splits the deck into a specified number of hands. If the cards cannot be split evenly,
+     * the hands will have different numbers of cards.
+     * 
+     * @param players the number of hands to split the deck into
+     * @return a list of hands
+     */
+    public List<Hand> split(int players) {
+        List<Hand> hands = new ArrayList<>();
+        for (int i = 0; i < players; i++) {
+            hands.add(new Hand());
+        }
+        Iterator<Card> cardIterator = cards.iterator();
+        int playerDeal = 0;
+        while(cardIterator.hasNext()) {
+            if(playerDeal == players) {
+                playerDeal = 0;
+            }
+            Card c = cardIterator.next();
+            hands.get(playerDeal).addCard(c);
+            cardIterator.remove();
+            playerDeal++;
+        }
+        return hands;
     }
 
     /**
